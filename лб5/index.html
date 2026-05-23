@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Породи собак (Лабораторна 5)</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .controls { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; padding: 15px; background: #f4f4f4; border-radius: 8px; }
+        .controls > div { display: flex; flex-direction: column; }
+        .card { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+        .card h3 { margin-top: 0; }
+    </style>
+</head>
+<body>
+
+    <h2>Довідник порід собак</h2>
+
+    <div class="controls">
+        <div>
+            <label for="searchInput">Пошук (назва або опис):</label>
+            <input type="text" id="searchInput" placeholder="Введіть ключове слово...">
+        </div>
+
+        <div>
+            <label for="groupFilter">Група порід:</label>
+            <select id="groupFilter">
+                <option value="all">Всі групи</option>
+                <option value="Пастуші">Пастуші</option>
+                <option value="Мисливські">Мисливські</option>
+                <option value="Декоративні">Декоративні</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="weightFilter">Максимальна вага (кг):</label>
+            <input type="number" id="weightFilter" placeholder="Наприклад: 20">
+        </div>
+
+        <div>
+            <label for="sortSelect">Сортувати за:</label>
+            <select id="sortSelect">
+                <option value="name">Назвою</option>
+                <option value="weight">Вагою</option>
+                <option value="height">Висотою</option>
+                <option value="lifespan">Тривалістю життя</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="dogList"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

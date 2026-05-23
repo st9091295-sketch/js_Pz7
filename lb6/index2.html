@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валютний інформер + Історія (Лабораторна 6)</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel left-panel">
+            <h2 id="current-date-title">Курс валют на <span id="current-date"></span></h2>
+            <p class="hint">Клікніть на валюту, щоб переглянути історію</p>
+            <ul class="currency-list" id="currency-list">
+                <li class="currency-item">Завантаження...</li>
+            </ul>
+        </div>
+
+        <div class="panel right-panel">
+            <h2>Конвертер валют</h2>
+            
+            <div class="converter-block">
+                <input type="number" id="amount-foreign" placeholder="Сума">
+                <input list="currency-select-foreign" id="currency-input-foreign" placeholder="Виберіть валюту">
+                <datalist id="currency-select-foreign"></datalist>
+                <span>&#8594;</span>
+                <input type="number" id="amount-uah-result" placeholder="Гривні" readonly>
+            </div>
+
+            <hr>
+
+            <div class="converter-block">
+                <input type="number" id="amount-uah" placeholder="Гривні">
+                <span>&#8594;</span>
+                <input list="currency-select-uah" id="currency-input-uah" placeholder="Виберіть валюту">
+                <datalist id="currency-select-uah"></datalist>
+                <input type="number" id="amount-foreign-result" placeholder="Сума" readonly>
+            </div>
+
+            <hr>
+            <h3 id="history-title">Курс валюти за тиждень</h3>
+            <div id="history-output">
+                <p class="select-prompt">Оберіть будь-яку валюту зі списку ліворуч для перегляду динаміки курсу.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app2.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валютний інформер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel left-panel">
+            <h2 id="current-date-title">Курс валют на <span id="current-date"></span></h2>
+            <ul class="currency-list" id="currency-list">
+                <li class="currency-item">Завантаження...</li>
+            </ul>
+        </div>
+
+        <div class="panel right-panel">
+            <h2>Конвертер валют</h2>
+            
+            <div class="converter-block">
+                <input type="number" id="amount-foreign" placeholder="Сума">
+                <input list="currency-select-foreign" id="currency-input-foreign" placeholder="Виберіть валюту">
+                <datalist id="currency-select-foreign"></datalist>
+                <span>&#8594;</span>
+                <input type="number" id="amount-uah-result" placeholder="Гривні" readonly>
+            </div>
+
+            <hr>
+
+            <div class="converter-block">
+                <input type="number" id="amount-uah" placeholder="Гривні">
+                <span>&#8594;</span>
+                <input list="currency-select-uah" id="currency-input-uah" placeholder="Виберіть валюту">
+                <datalist id="currency-select-uah"></datalist>
+                <input type="number" id="amount-foreign-result" placeholder="Сума" readonly>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
