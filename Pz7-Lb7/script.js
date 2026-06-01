@@ -1,4 +1,4 @@
-const DB_URL = 'https://lb-7-59273-default-rtdb.firebaseio.com/';
+const DB_URL = 'https://lb-7-59273-default-rtdb.firebaseio.com/todos';
 
 let todos = [];
 
